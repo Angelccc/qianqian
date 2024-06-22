@@ -64,8 +64,11 @@
 </head>
 
 <body>
+<!--        style="display: none;"-->
 
-<!--<audio src="./music/gai.mp3" controls autoplay="autoplay" id="audio"></audio>-->
+<!--<video controls autoplay loop id="audio" >-->
+<!--    <source type="audio/mpeg" src="https://webfs.hw.kugou.com/202406222259/9ca7865ba49f1caee862f9f7e877213c/v2/346697d931830c917adb51c4dd8a375e/G325/M0B/B2/9D/JZUEAGTUQdKAGscEAAcyU1trQ_Y914.mp3">-->
+<!--</video> https://github.com/rainCoolGuy/qianqian.git-->
 <div id="text"></div>
 
 <div id="drag-container" style="transform: rotateX(-10deg) rotateY(0deg);">
@@ -74,43 +77,43 @@
             style="width: 120px; height: 170px; animation: 60s linear 0s infinite normal none running spinRevert;"
     >
         <img
-                src="./images/image_1.png"
+                src="./images/image_1.jpg"
                 alt=""
                 style="transform: rotateY(0deg) translateZ(240px); transition: transform 1s ease 2s;"
         />
         <img
-                src="./images/image_2.png"
+                src="./images/image_2.jpg"
                 alt=""
                 style="transform: rotateY(45deg) translateZ(240px); transition: transform 1s ease 1.75s;"
         />
         <img
-                src="./images/image_3.png"
+                src="./images/image_3.jpg"
                 alt=""
                 style="transform: rotateY(90deg) translateZ(240px); transition: transform 1s ease 1.5s;"
         />
         <img
-                src="./images/image_4.png"
+                src="./images/image_4.jpg"
                 alt=""
                 style="transform: rotateY(135deg) translateZ(240px); transition: transform 1s ease 1.25s;"
         />
         <img
-                src="./images/image_5.png"
+                src="./images/image_5.jpg"
                 alt=""
                 style="transform: rotateY(180deg) translateZ(240px); transition: transform 1s ease 1s;"
         />
         <img
-                src="./images/image_6.png"
+                src="./images/image_6.jpg"
                 alt=""
                 style="transform: rotateY(225deg) translateZ(240px); transition: transform 1s ease 0.75s;"
         />
 
         <img
-                src="./images/image_7.png"
+                src="./images/image_7.jpg"
                 alt=""
                 style="transform: rotateY(270deg) translateZ(240px); transition: transform 1s ease 0.5s;"
         />
         <img
-                src="./images/image_8.png"
+                src="./images/image_8.jpg"
                 alt=""
                 style="transform: rotateY(315deg) translateZ(240px); transition: transform 1s ease 0.25s;"
         />
@@ -150,15 +153,18 @@
 </script>
 <script>
     createSnow("", 60);
+
+    // var myAuto = document.getElementById('audio');
+    // myAuto.play();
+    // myAuto.focus();
+
     let diff = getDiffDate("2018-12-03");
-    let content = `从2018年12月03日到现在已经` + diff + `天了，希望在未来的每一天里我们都能快快乐乐，让每一天都像情人节一样`;
+    let content = `从2018年12月03日到现在已经` + diff + `天了，希望在未来的每一天里我们都能快快乐乐.`;
     let days = document.getElementById("days");
     days.innerHTML = content;
 
 
-    var myAuto = document.getElementById('audio');
-    myAuto.play();
-    myAuto.focus();
+
 
     function getDiffDate(targetDate) {
         let date1 = new Date(targetDate);
